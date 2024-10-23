@@ -48,9 +48,11 @@
 				<select id="order" name="order" size="6"></select>
 				<p id="total"></p>            		
 			</section>
-			<section id="buttons">
-				<input class="ui-button ui-widget ui-corner-all" type="button" name="place_order" id="place_order" value="Place Order">
-				<input type="button" name="clear_order" id="clear_order" value="Clear Order">				            		
+			<section id="buttons" class="widget">
+			
+		<button name="place_order" id="place_order">Place Order</button>
+        <button name="clear_order" id="clear_order">Clear Order</button>
+
 			</section>
 		</section>
 
@@ -120,13 +122,31 @@
 
 		$("#place_order").click( (evt) => {
 // if order ""
-
-			$("#dialog").dialog();
+	const order = $("#order").text();
+			if (order == "") {
+				$("#dialog").dialog();
+			}
+			else {
+				$("#dialog-1").dialog();
+			}
 // else need dialog-1
-
 		});
-
 	})
+</script>
+
+<script>
+	$( function() {
+    $( ".widget button" )
+       .eq( 0 ).button( {
+        icon: "ui-icon-check"
+	   }).end()
+	   .eq( 1 ).button( {
+		icon: "ui-icon-trash"
+	   })
+	});
+</script>
+
+
 </script>
 
 </body>
