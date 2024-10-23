@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Sweet Shop</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<link rel="stylesheet" href="jquery-ui.theme.min.css">
+
+	<link href="css/lightbox.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+    <header>
+
+		<h1><img src="images/logo_image.png">The Sweet Shop</h1>
+    </header>
+    <main>
+
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Online Ordering</a></li>
+		<li><a href="#tabs-2">Cake Gallery</a></li>
+	</ul>
+
+	<div id="tabs-1">
+		<section id="menu">
+			<p>Click an item to add it to your order.</p>
+			<ul>
+				<li><a href="#"><img id="images/cupcake1.jpg" src="images/cupcake1.jpg" alt="cupcake"/></a></li>
+				<li><a href="#"><img id="images/cupcake2.jpg" src="images/cupcake2.jpg" alt="cupcake"/></a></li>
+				<li><a href="#"><img id="images/cupcake3.jpg" src="images/cupcake3.jpg" alt="cupcake"/></a></li>
+				<li><a href="#"><img id="images/cake1.jpg" src="images/cake1.jpg" alt="cake"/></a></li>
+				<li><a href="#"><img id="images/cake2.jpg" src="images/cake2.jpg" alt="cake"/></a></li>
+				<li><a href="#"><img id="images/cake3.jpg" src="images/cake3.jpg" alt="cake"/></a></li>
+				<li><a href="#"><img id="images/cheesecake1.jpg" src="images/cheesecake1.jpg" alt="cheesecake"/></a></li>
+				<li><a href="#"><img id="images/cheesecake2.jpg" src="images/cheesecake2.jpg" alt="cheesecake"/></a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Your Order</h2>
+			<section>
+				<select id="order" name="order" size="6"></select>
+				<p id="total"></p>            		
+			</section>
+			<section id="buttons">
+				<input class="ui-button ui-widget ui-corner-all" type="button" name="place_order" id="place_order" value="Place Order">
+				<input type="button" name="clear_order" id="clear_order" value="Clear Order">				            		
+			</section>
+		</section>
+
+<div id="dialog" title="One Item Required" style= "display: none;">
+	<p>At least one item must be added to your cart before checkout can be performed</p>
+</div>
+<div id="dialog-1" title="Feature Not Implemented" style= "display: none;">
+	<p>The chosen feature is not currently available.</p>
+</div>
+
+</div>	
+		
+<div id="tabs-2">
+	<h2>Need Ideas for a Custom Cake? Check out our Cake Galllery.</h2>
+<section>	
+
+	<a href="images/sc_cake_1_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_1.jpg">
+	</a>
+	<a href="images/sc_cake_2_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_2.jpg">
+	</a>
+	<a href="images/sc_cake_3_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_3.jpg">
+	</a>
+	<a href="images/sc_cake_4_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_4.jpg">
+	</a>
+	<a href="images/sc_cake_5_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_5.jpg">
+	</a>
+	<a href="images/sc_cake_6_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_6.jpg">
+	</a>
+	<a href="images/sc_cake_7_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_7.jpg">
+	</a>
+	<a href="images/sc_cake_8_big.jpg" data-lightbox="gallery">
+		<img src="images/sc_cake_8.jpg">
+	</a>
+</section>
+
+</div>
+
+</div>
+
+	</main> 
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.min.js"></script>
+
+	<script src="lightbox.min.js"></script>
+
+<script>
+	$(function() {
+		$("#tabs").tabs();
+	});
+</script>
+
+<script>
+	$(document).ready( () => {
+		$("#place_order").button();
+		$("#clear_order").button();
+
+		$("#place_order").click( (evt) => {
+// if order ""
+
+			$("#dialog").dialog();
+// else need dialog-1
+
+		});
+
+	})
+</script>
+
+</body>
+</html>

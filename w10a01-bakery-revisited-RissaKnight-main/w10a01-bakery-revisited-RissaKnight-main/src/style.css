@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Peralta&family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: Roboto;
+    font-size: 100%;
+    background-color: white;
+    width: 680px;
+    margin: 0 auto;
+	color: #386f7a;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 0 2em 1em;
+}
+header {
+	text-align: center;
+}
+header img {
+	margin-right: .2em;
+}
+section {
+	color: #386f7a;
+}
+h1 { 
+    font-size: 46pt;
+	font-family: "Lobster Two";
+    margin-bottom: .5em;
+	color: #e05678;
+}
+h2 {
+	font-size: 16pt;
+	font-family: Roboto;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: .2em;
+	color: #386f7a;
+}
+select {
+	width: 305px;
+}
+#menu h2 {
+	padding-top: 1em;
+
+}
+#menu p {
+	margin-top: 0;
+	margin-bottom: .7em;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+}
+ul li {
+	display: inline;
+    padding: 5px 0 5px 0;
+}
+#total {
+	margin-top: .5em;
+	margin-bottom: .7em;
+}
+input {
+    width: 150px;
+    margin-right: 5px;
+}
+#buttons {
+	margin-top: 0;
+}
+img {
+	overflow:hidden;
+	position:relative;
+}
+.container {
+	width:460px;
+	height:200px;
+}
+.left-box {
+	float:left;
+	width:150px;
+	height:200px;
+}
+.middle-box {
+	float:left;
+	width:150px;
+	height:200px;
+	margin-left:5px;
+}
+.right-box {
+	float:right;
+	width:150px;
+	height:200px;
+	margin-left:5px;
+}
